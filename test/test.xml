@@ -1,0 +1,11 @@
+<GObject gobjType="GDataTag" phyType="电压" dispUnit="v" bShowPhy="1" bShowUnit="1" id="3">
+    <mxCell parent="1" style="shape=label;fillColor=none;strokeColor=none;fontColor=#000;" vertex="1">
+        <mxGeometry x="0" y="0" width="80" height="30" as="geometry"/>
+    </mxCell>
+</GObject>
+
+<GObject gobjType="GSignalTag" id="13">
+    <mxCell parent="1" style="shape=label;fillColor=none;strokeColor=none;fontColor=#000;" vertex="1">
+        <mxGeometry x="0" y="0" width="80" height="30" as="geometry"/>
+    </mxCell>
+</GObject>
