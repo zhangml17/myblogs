@@ -5,7 +5,9 @@ const handleUserRouter = require('./src/routes/users')
 
 const getPostData = req =>{
     const promise = new Promise((resolve,reject)=>{
-        if(req.method !== 'POST'){
+        // 既能处理POST请求也能处理PATCH请求，其实所有的HTTP请求都能处理，但是
+        // 其他请求不需要获取请求体的内容,因此就没必要在这里做处理
+        if(req.method !== 'POST' && req.method !== 'PATCH'){
             resolve({})
             return
         }

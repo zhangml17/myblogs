@@ -42,7 +42,7 @@ const handleBlogRouter = (req,res)=>{
     }
 
     // 编辑指定博客
-    if(method === 'POST' && path === '/api/blogs/update'){
+    if(method === 'PATCH' && path === '/api/blogs/update'){
         const { title,content } = req.body
         let blogId = req.query.blogId
         const blogResult = updateBlog(title,content,blogId)
@@ -55,7 +55,7 @@ const handleBlogRouter = (req,res)=>{
     }
 
     // 删除指定博客
-    if(method === 'POST' && path === '/api/blogs/del'){
+    if(method === 'DELETE' && path === '/api/blogs/del'){
         let blogId = req.query.blogId
         const blogResult = delBlog(blogId)
         return blogResult.then(data=>{
