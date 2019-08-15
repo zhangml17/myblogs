@@ -35,7 +35,7 @@ function get(key){
                 resolve(val)
             }
             
-            redisCli.quit()
+            // redisCli.quit()
         })
     })
     return promise
