@@ -1,5 +1,5 @@
 const { SuccessModel,ErrorModel} = require('../models/resModel')
-const { loginCheck,userList } = require('../controllers/users')
+const { login:logInto,userList } = require('../controllers/users')
 
 const handleUserRouter = (req,res)=>{
     const method = req.method
@@ -17,7 +17,7 @@ const handleUserRouter = (req,res)=>{
 
     if(method === 'POST' && path === '/api/users/login'){
         const {username,password} = req.body
-        const result = loginCheck(username,password)
+        const result = logInto(username,password)
         return result.then(data =>{
             if(data.username){
                 return new SuccessModel(data,"登录成功")
